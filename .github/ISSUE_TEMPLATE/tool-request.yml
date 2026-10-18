@@ -1,0 +1,42 @@
+name: ツールの改善・カスタマイズ
+description: 公開ツールへの要望を架空の例で伝える
+title: "[要望] "
+body:
+  - type: markdown
+    attributes:
+      value: "これは公開窓口です。業務データ・連絡先・認証情報は書かず、架空の例を使ってください。注文・支払い・納期はここでは確定しません。"
+  - type: dropdown
+    id: tool
+    attributes:
+      label: 対象ツール
+      options:
+        - 価格改定・CSVツール
+        - 粗大ごみ料金しらべ
+        - 作業ボードの操作デモ
+        - その他の小さなツール
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: いま困っている作業
+      description: どの場面で、何を使って、どこに手間があるかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: 入力と欲しい結果の架空例
+      placeholder: "例：商品A,1100,600 → 原価が10%上がる場合の価格をCSVで欲しい"
+    validations:
+      required: true
+  - type: dropdown
+    id: purpose
+    attributes:
+      label: 希望する対応
+      options:
+        - 無料公開版の改善要望
+        - 個別の調整について範囲・費用を知りたい
+        - 不具合の報告
+    validations:
+      required: true
